@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://IraKrisk.github.io/mladen",
   "scripts": {
-    "sass": "node-sass -w scss/ -o site/css/ --recursive"
+    "sass": "node-sass -w scss/ -o site/css/ --recursive",
+    "deploy": "gh-pages -d site"
   },
   "author": "Ira",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   }
 }
