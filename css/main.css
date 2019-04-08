@@ -1,0 +1,279 @@
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+  transition: all .6s ease-out; }
+  .menu-btn .btn-line {
+    width: 1.6rem;
+    height: .2rem;
+    background: #601b1b;
+    margin-bottom: .4rem; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(0.9rem, 0.5rem);
+      background: #eee8d5; }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(0.35rem, 0.15rem);
+      background: #eee8d5; }
+
+.menu-list {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -12rem;
+  letter-spacing: .5rem;
+  font-weight: bold;
+  background: #601b1b;
+  padding: 1.5rem;
+  transition: all .6s ease-out; }
+  .menu-list.open {
+    display: block;
+    margin-top: 0; }
+  .menu-list a {
+    text-transform: uppercase;
+    color: #eee8d5;
+    line-height: 2rem; }
+    .menu-list a:hover {
+      color: #d1c08c; }
+  .menu-list li.active > a {
+    color: #d1c08c; }
+
+/* moves main on click */
+main {
+  transition: all .6s ease-out; }
+  main.push-main {
+    margin-top: 7rem;
+    transition: all .6s ease-out; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Aleo', serif;
+  font-family: 'Kotta One', serif;
+  font-family: 'Milonga', cursive;
+  line-height: 1.5;
+  background: #eee8d5;
+  color: #601b1b; }
+
+h1 {
+  padding: .7rem 2rem; }
+
+h2 {
+  margin-bottom: 1.3rem; }
+
+h3 {
+  margin: 2rem auto 1.5rem; }
+
+a {
+  text-decoration: none;
+  color: #601b1b; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%;
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 10px -8px; }
+
+header {
+  background-color: #e7dec3; }
+
+main {
+  width: 90%;
+  margin: 1rem auto; }
+
+/* home page */
+.home-page .catalogue-item {
+  cursor: pointer; }
+
+/* category/products list container */
+.catalogue-item {
+  display: block;
+  position: relative;
+  height: 100%;
+  margin-bottom: .7rem;
+  padding: 0; }
+  .catalogue-item .desc {
+    position: absolute;
+    visibility: hidden;
+    color: #eee8d5;
+    background: transparent;
+    height: 98%;
+    width: 100%;
+    text-align: center; }
+  .catalogue-item:hover > .desc {
+    visibility: visible;
+    background: #601b1b;
+    opacity: .7;
+    padding-top: 25%;
+    transition: all .6s ease-out; }
+
+/* catalogue products page */
+.product-list h3 {
+  display: inline-block; }
+
+.product-list a {
+  float: right;
+  margin: 1.5rem auto 1.5rem;
+  color: #eee8d5;
+  background: #601b1b;
+  border: none;
+  padding: .5rem;
+  border-radius: 0.25rem; }
+  .product-list a:hover {
+    background: #882626;
+    transition: all .6s ease-out; }
+
+/* about page - gallery */
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.slider-container {
+  position: relative;
+  width: 111%;
+  left: -5.5%;
+  margin-bottom: 1.3rem; }
+  .slider-container .slider-items {
+    display: grid;
+    grid-auto-flow: column; }
+    .slider-container .slider-items .slide-hidden {
+      display: none; }
+    .slider-container .slider-items .slide-active {
+      display: block;
+      animation: fadeIn 1s ease-in-out; }
+    .slider-container .slider-items img {
+      border-radius: 0; }
+  .slider-container .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #eee8d5; }
+    .slider-container .arrow.arrow-left {
+      left: .3rem; }
+    .slider-container .arrow.arrow-right {
+      right: .3rem; }
+    .slider-container .arrow:hover {
+      color: #601b1b;
+      transition: all .6s ease-out; }
+
+.about {
+  margin-bottom: 1.7rem; }
+
+/* contact */
+.address {
+  text-align: center;
+  line-height: 2.5rem;
+  margin-top: 2rem; }
+  .address h3 {
+    margin: 0; }
+  .address .fa-address-card, .address .fa-envelope, .address .fa-phone {
+    margin-right: .8rem;
+    font-size: 1.3rem; }
+  .address address {
+    font-style: normal; }
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: .3rem;
+  text-align: center;
+  margin: 3rem auto 0;
+  /* hide number type field background color and arrows */ }
+  .form .error-msg {
+    color: #eee8d5;
+    background: #601b1b;
+    border: none;
+    padding: .5rem;
+    border-radius: 0.25rem;
+    transition: all .6s ease-out;
+    text-align: center;
+    margin-bottom: 1.5rem; }
+  .form input, .form textarea {
+    margin-bottom: 2.5rem;
+    font-family: 'Milonga', cursive;
+    background: transparent;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 0.03rem solid #601b1b; }
+  .form textarea {
+    height: 4rem; }
+  .form #submit {
+    color: #eee8d5;
+    background: #601b1b;
+    border: none;
+    padding: .5rem;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .form #submit:hover {
+      background: #882626;
+      transition: all .6s ease-out; }
+  .form input:focus, .form textarea:focus, .form textarea:visited {
+    outline: none; }
+  .form input:-webkit-autofill,
+  .form input:-webkit-autofill:hover,
+  .form input:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s; }
+  .form input[type="number"] {
+    width: 100%;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield; }
+  .form input[type=number]::-webkit-inner-spin-button,
+  .form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; }
+
+.map iframe {
+  position: relative;
+  width: 111%;
+  left: -5.5%;
+  height: 12rem; }
+
+/* thank you page */
+.thank-you {
+  text-align: center;
+  margin: 4rem 0; }
+
+/* footer */
+.footer {
+  background: #e7dec3;
+  text-align: center;
+  font-size: .9rem;
+  padding: .5rem; }
+  .footer > * {
+    margin: .7rem auto; }
+  .footer .footer-logo {
+    font-weight: bold;
+    font-size: 1rem; }
+  .footer .footer-address {
+    line-height: 2; }
+    .footer .footer-address address {
+      font-style: normal; }
+  .footer .footer-contact {
+    color: #eee8d5;
+    background: #601b1b;
+    border: none;
+    padding: .5rem;
+    border-radius: 0.25rem;
+    width: 40%;
+    color: #eee8d5; }
+    .footer .footer-contact:hover {
+      background: #882626;
+      transition: all .6s ease-out; }
+    .footer .footer-contact a {
+      color: #eee8d5; }
