@@ -1,0 +1,14 @@
+{
+  "name": "mladen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o site/css/ --recursive"
+  },
+  "author": "Ira",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

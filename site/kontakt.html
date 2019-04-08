@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Line</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ira" />
+    <meta name="description" content="Art Line" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+      integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
+      crossorigin="anonymous" ></script>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Aleo|Kotta+One|Milonga" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><h1>Art Line</h1></a>
+      </div>
+      <div class="menu">
+        <div class="menu-btn">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+        </div>
+        <nav class="menu-list">
+          <ul>
+            <li class="menu-item"><a href="index.html">Proizvodi</a></li>
+            <li class="menu-item"><a href="onama.html">O nama</a></li>
+            <li class="menu-item"><a href="cjenik.html">Cjenik</a></li>
+            <li class="menu-item active"><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="contact">
+      <h2>Kontaktirajte nas</h2>
+      <p>Za sve upite kontaktirajte nas kontakt formom, emailom ili telefonom, rado ćemo odgovoriti na svako Vaše pitanje.</p>
+      <div class="address">
+        <h3>Art Line</h3>
+        <address class="address-line"><i class="far fa-address-card icon"></i>Vrhovo 15, Rijeka</address>
+        <p class="address-line"><i class="far fa-envelope"></i>bla bla</p>
+        <p class="address-line"><i class="fas fa-phone"></i><a href="tel:091-123-123">555 333 666</a></p>     
+      </div>
+      <form id="form" class="form" action="form.php" method="post" onsubmit="return formValidation()"  novalidate>
+        <div id="error-msg"></div>
+        <label for="name">Ime</label>
+        <input type="text" name="name" id="name">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="phone">Mobitel</label>
+        <input type="tel" name="phone" id="phone">
+        <label for="message" class="message">Poruka</label>
+        <textarea name="message" id="message" spellcheck="false"></textarea>
+        <label for="captcha">3 + 8?</label>
+        <input type="number" name="captcha" id="captcha">
+        <input id="submit" type="submit" value="Pošalji" onclick="location.href='#contact';">
+      </form>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?width=100%&amp;height=200&amp;hl=en&amp;q=Vrhovo%2015%2C%20Rijeka%2C%20Hrvatska+(Art%20Line)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create route map</a></iframe>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-logo">Art Line</div>
+      <div class="footer-address">
+        <address class="address-line">Vrhovo 15, Rijeka</address>
+        <p class="address-line">bla bla</p>
+        <a href="tel:091-123-123" class="address-line">555 333 666</a>  
+      </div>
+      <div class="footer-contact">
+          <a href="kontakt.html">Kontakt</a>   
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

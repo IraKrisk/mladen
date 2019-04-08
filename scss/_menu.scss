@@ -1,0 +1,70 @@
+// Menu Button
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+  @include hoverEffect;
+  .btn-line {
+    width: 1.6rem;
+    height: .2rem;
+    background: $dark;
+    margin-bottom: .4rem;
+  }
+  // Menu Button Change
+  &.close {
+    transform: rotate(180deg);
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(.9rem, .5rem);
+        background: $light;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(.35rem, .15rem);
+        background: $light;
+      }
+    }
+  }
+}
+
+.menu-list {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -12rem;
+  letter-spacing: .5rem;
+  font-weight: bold;
+  background: $dark;
+  padding: 1.5rem;
+  @include hoverEffect;
+  &.open {
+    display: block;
+    margin-top: 0;
+  }
+  a {
+    text-transform: uppercase;
+    color: $light;
+    line-height: 2rem;
+    &:hover {
+      color: darken($light, 20);
+    }
+  }
+  li.active > a {
+    color: darken($light, 20);
+  }
+}
+
+/* moves main on click */
+main {
+  @include hoverEffect;
+  &.push-main {
+    margin-top: 7rem;
+    @include hoverEffect;
+  }
+}
+

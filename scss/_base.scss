@@ -1,0 +1,28 @@
+$dark: #601b1b;
+$light: #eee8d5;
+$borderRadius: .25rem;
+
+@mixin hoverEffect {
+  transition: all .6s ease-out;
+}
+@mixin button {
+  color: $light;
+  background: $dark;
+  border: none;
+  padding: .5rem;
+  border-radius: $borderRadius;
+}
+@mixin buttonHover {
+  background: lighten($dark, 10);
+  @include hoverEffect;
+}
+@mixin fullWidth {
+  position: relative;
+  width: 111%;
+  left: -5.5%;
+}
+@mixin mediaQuery {
+  @media screen and (min-width: 50rem) {
+    @content;
+  }
+}
