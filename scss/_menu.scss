@@ -36,7 +36,7 @@
   top: 0;
   width: 100%;
   text-align: center;
-  margin-top: -13rem;
+  margin-top: -15rem;
   letter-spacing: .5rem;
   font-weight: bold;
   background: $dark;
@@ -49,7 +49,7 @@
   a {
     text-transform: uppercase;
     color: $light;
-    line-height: 2.5rem;
+    line-height: 3rem;
     &:hover {
       color: darken($light, 20);
     }
@@ -63,7 +63,7 @@
 main {
   @include hoverEffect;
   &.push-main {
-    margin-top: 9.7rem;
+    margin-top: 12rem;
     @include hoverEffect;
   }
 }

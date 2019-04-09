@@ -26,7 +26,7 @@
   top: 0;
   width: 100%;
   text-align: center;
-  margin-top: -13rem;
+  margin-top: -15rem;
   letter-spacing: .5rem;
   font-weight: bold;
   background: #601b1b;
@@ -38,7 +38,7 @@
   .menu-list a {
     text-transform: uppercase;
     color: #eee8d5;
-    line-height: 2.5rem; }
+    line-height: 3rem; }
     .menu-list a:hover {
       color: #d1c08c; }
   .menu-list li.active > a {
@@ -48,7 +48,7 @@
 main {
   transition: all .6s ease-out; }
   main.push-main {
-    margin-top: 9.7rem;
+    margin-top: 12rem;
     transition: all .6s ease-out; }
 
 * {
@@ -145,7 +145,7 @@ main {
   position: relative;
   width: 111%;
   left: -5.5%;
-  margin-top: -1rem;
+  margin-top: -1.4rem;
   margin-bottom: 1.3rem; }
   .slider-container .slider-items {
     display: grid;
