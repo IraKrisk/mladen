@@ -26,7 +26,7 @@
   top: 0;
   width: 100%;
   text-align: center;
-  margin-top: -12rem;
+  margin-top: -13rem;
   letter-spacing: .5rem;
   font-weight: bold;
   background: #601b1b;
@@ -38,7 +38,7 @@
   .menu-list a {
     text-transform: uppercase;
     color: #eee8d5;
-    line-height: 2rem; }
+    line-height: 2.5rem; }
     .menu-list a:hover {
       color: #d1c08c; }
   .menu-list li.active > a {
@@ -48,7 +48,7 @@
 main {
   transition: all .6s ease-out; }
   main.push-main {
-    margin-top: 7rem;
+    margin-top: 10rem;
     transition: all .6s ease-out; }
 
 * {
@@ -128,7 +128,7 @@ main {
   color: #eee8d5;
   background: #601b1b;
   border: none;
-  padding: .5rem;
+  padding: .7rem;
   border-radius: 0.25rem; }
   .product-list a:hover {
     background: #882626;
@@ -196,13 +196,13 @@ main {
     color: #eee8d5;
     background: #601b1b;
     border: none;
-    padding: .5rem;
+    padding: .7rem;
     border-radius: 0.25rem;
     transition: all .6s ease-out;
     text-align: center;
     margin-bottom: 1.5rem; }
   .form input, .form textarea {
-    margin-bottom: 2.5rem;
+    margin: 1rem 0 2.5rem;
     font-family: 'Milonga', cursive;
     background: transparent;
     line-height: 1.5rem;
@@ -215,7 +215,7 @@ main {
     color: #eee8d5;
     background: #601b1b;
     border: none;
-    padding: .5rem;
+    padding: .7rem;
     border-radius: 0.25rem;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -268,7 +268,7 @@ main {
     color: #eee8d5;
     background: #601b1b;
     border: none;
-    padding: .5rem;
+    padding: .7rem;
     border-radius: 0.25rem;
     width: 40%;
     color: #eee8d5; }
