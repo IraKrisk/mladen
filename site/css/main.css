@@ -218,6 +218,7 @@ main {
     border: none;
     padding: .7rem;
     border-radius: 0.25rem;
+    margin-top: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
