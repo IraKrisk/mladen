@@ -94,6 +94,7 @@ main {
 }
 .slider-container {
   @include fullWidth;
+  margin-top: -1rem;
   margin-bottom: 1.3rem;
   .slider-items {
     display: grid;
