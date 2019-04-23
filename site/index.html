@@ -17,29 +17,38 @@
     ></script>
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Aleo|Kotta+One|Milonga"
+      href="https://fonts.googleapis.com/css?family=Milonga"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="index.html"><h1>Art Line</h1></a>
-      </div>
-      <div class="menu">
-        <div class="menu-btn">
-          <div class="btn-line"></div>
-          <div class="btn-line"></div>
-          <div class="btn-line"></div>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html"><h1>Art Line</h1></a>
         </div>
-        <nav class="menu-list">
-          <ul>
-            <li class="menu-item active"><a href="index.html">Proizvodi</a></li>
-            <li class="menu-item"><a href="onama.html">O nama</a></li>
-            <li class="menu-item"><a href="cjenik.html">Cjenik</a></li>
-            <li class="menu-item"><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </nav>
+        <div class="menu">
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+          </div>
+          <nav class="menu-list">
+            <ul class="main-menu-items">
+              <li class="menu-item dropdown active"><a href="index.html">Proizvodi</a> 
+                <ul class="submenu">
+                  <li><a href="kategorije/kucice.html">Kućice</a></li>
+                  <li><a href="kategorije/magneti.html">Zvonici</a></li>
+                  <li><a href="kategorije/kucice.html">Bunari</a></li>
+                  <li><a href="kategorije/magneti.html">Barke</a></li>   
+                </ul>
+              </li>
+              <li class="menu-item"><a href="onama.html">O nama</a></li>
+              <li class="menu-item"><a href="cjenik.html">Cjenik</a></li>
+              <li class="menu-item"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="home">
@@ -59,29 +68,29 @@
       <section>
         <h3>Kategorije</h3>
       </section>
-      <section id="catalogue">
-        <a class="catalogue-item" href="kategorija/kucice.html">
+      <section class="catalogue">
+        <a class="catalogue-item" href="kategorije/kucice.html">
           <div class="desc">
             <h4>Kućice</h4>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </div>
           <img src="images/img1.jpg" alt="" />
         </a>
-        <a class="catalogue-item" href="kategorija/kucice.html">
+        <a class="catalogue-item" href="kategorije/kucice.html">
           <div class="desc">
             <h4>Bunari</h4>
             <p>Far far away, behind the word mountains</p>
           </div>
           <img src="images/img1.jpg" alt="" />
         </a>
-        <a class="catalogue-item" href="kategorija/magneti.html">
+        <a class="catalogue-item" href="kategorije/magneti.html">
           <div class="desc">
             <h4>Magneti</h4>
             <p>far from the countries Vokalia and Consonantia</p>
           </div>
           <img src="images/img1.jpg" alt="" />
         </a>
-        <a class="catalogue-item" href="kategorija/magneti.html">
+        <a class="catalogue-item" href="kategorije/magneti.html">
           <div class="desc">
             <h4>Zvonici</h4>
             <p>A small river named Duden flows</p>

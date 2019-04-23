@@ -7,15 +7,16 @@
   padding: 0;
 }
 body {
-  font-family: 'Aleo', serif;
-  font-family: 'Kotta One', serif;
   font-family: 'Milonga', cursive;
   line-height: 1.5;
   background: $light;
   color: $dark;
 }
 h1 {
-  padding: .7rem 2rem;
+  padding: .7rem 0;
+  &:hover {
+    color: $darkLighten;
+  }
 }
 h2 {
   margin-bottom: 1.3rem;
@@ -33,27 +34,49 @@ ul {
 img {
   width: 100%;
   border-radius: $borderRadius;
-  box-shadow: 0px 0px 10px -8px;
+  box-shadow: $shadow;
 }
 header {
-  background-color: darken($light, 5);
+  background-color: $lightDarken;
+  .header-container {
+    @include width;
+    position: relative;
+    margin: 0 auto;
+  }
 }
 main {
-  width: 90%;
+  @include width;
   margin: 1rem auto;
 }
 
-/* home page */
+// home page 
 .home-page .catalogue-item {
   cursor: pointer;
 }
-/* category/products list container */
+
+// catalogue desktop layout
+.catalogue {
+  @include mQMed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 1.5rem 2rem;
+  }
+  @include mQLrg {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 2rem 3rem;
+  }
+}
+// category item/products container 
 .catalogue-item {
   display: block;
   position: relative;
   height: 100%;
-  margin-bottom: .7rem;
   padding: 0;
+  margin-bottom: 1.5rem;
+  @include mQMed {
+    margin-bottom: .2rem;
+  }
+  // catalogue item overlay
   .desc {
     position: absolute;
     visibility: hidden;
@@ -72,29 +95,33 @@ main {
   } 
 }
 
-/* catalogue products page */
+// catalogue products page 
 .product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 1rem;
   h3 {
-  display: inline-block;
+    justify-self: left;
+    margin: 1.5rem 0;
   }
   a {
-  float: right;
-  margin: 1.5rem auto 1.5rem;
-  @include button;
+    justify-self: end;
+   @include button;
   &:hover {
     @include buttonHover;
     }
   }
 }
 
-/* about page - gallery */
+// about page - gallery 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 .slider-container {
-  @include fullWidth;
-  margin-top: -1.4rem;
+  @include fullWidthContainer;
+  margin-top: -1rem;
   margin-bottom: 1.3rem;
   .slider-items {
     display: grid;
@@ -131,7 +158,7 @@ main {
   margin-bottom: 1.7rem;
 }
 
-/* contact */
+// contact
 .address {
   text-align: center;
   line-height: 2.5rem;
@@ -184,7 +211,7 @@ main {
   input:focus, textarea:focus, textarea:visited {
     outline: none;
   }
-  /* hide number type field background color and arrows */
+  // hide number type field background color and arrows 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus {
@@ -202,17 +229,17 @@ main {
   }
 }
 .map iframe {
-  @include fullWidth;
+  @include fullWidthContainer;
   height: 12rem;
 }
 
-/* thank you page */
+// thank you page
 .thank-you {
   text-align: center;
   margin: 4rem 0;
 }
 
-/* footer */
+// footer 
 .footer {
   background: darken($light, 5);
   text-align: center;
@@ -235,6 +262,9 @@ main {
     @include button;
     width: 40%;
     color: $light;
+    @include mQLrg {
+      width: 25%;
+    }
     &:hover {
       @include buttonHover;
     }

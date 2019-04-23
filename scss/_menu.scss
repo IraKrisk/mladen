@@ -1,4 +1,4 @@
-// Menu Button
+// menu button
 .menu-btn {
   position: absolute;
   z-index: 1;
@@ -12,7 +12,10 @@
     background: $dark;
     margin-bottom: .4rem;
   }
-  // Menu Button Change
+  @include mQLrg {
+    display: none;
+  }
+  // menu button change
   &.close {
     transform: rotate(180deg);
     .btn-line {
@@ -42,24 +45,93 @@
   background: $dark;
   padding: 1.5rem;
   @include hoverEffect;
+  // button clicked
   &.open {
     display: block;
     margin-top: 0;
   }
+  // menu items list media query
+  ul.main-menu-items {
+    @include mQLrg {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    }
+  }
   a {
+    position: relative;
     text-transform: uppercase;
     color: $light;
     line-height: 3rem;
+    // animated underline on hover set to 0
+    &:after {
+      @include animatedUnderline;
+      width: 0;
+    }    
+    // hovered link anchor
     &:hover {
       color: darken($light, 20);
+      @include mQLrg {
+        color: $darkLighten;
+      }
+      // animated underline on hover set to 120%
+      &:after {
+        width: 120%;
+      }
+    }
+    @include mQLrg {
+      color: $dark;
     }
   }
-  li.active > a {
+  .menu-item.active > a {
     color: darken($light, 20);
+    // selected menu item underline
+    &:after {
+      @include animatedUnderline;
+    }
+    @include mQLrg {
+      color: $darkLighten;
+    }
+  }
+  // menu-list media query
+  @include mQLrg {
+    margin-top: 0;
+    width: 60%;
+    right: 0;
+    padding: .7rem 0;
+    letter-spacing: 0;
+    background: transparent;
+  }
+  .dropdown {
+    position: relative;
+    .submenu {  
+      display: none;
+      box-shadow: $shadow;
+      @include mQLrg {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        left: -20%;
+        width: 140%;
+        background: $lightDarken;
+        z-index: 1;      
+        li {
+          height: 0;
+          overflow: hidden;
+          @include hoverEffect;
+        }
+      }
+    }
+    // dropdown hovered
+    &:hover > .submenu {
+      padding: 1rem;
+      li { 
+        height: 3rem;
+      }
+    }
   }
 }
 
-/* moves main on click */
+// moves main on click 
 main {
   @include hoverEffect;
   &.push-main {
