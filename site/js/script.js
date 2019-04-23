@@ -109,16 +109,3 @@ if(submitBtn) {
   arrowLeft.addEventListener('click', leftSlide, false);
 
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,6 @@
 @import 'base';
 @import 'menu';
+@import 'lightbox.min';
 
 * {
   box-sizing: border-box;
@@ -49,11 +50,6 @@ main {
   margin: 1rem auto;
 }
 
-// home page 
-.home-page .catalogue-item {
-  cursor: pointer;
-}
-
 // catalogue desktop layout
 .catalogue {
   @include mQMed {
@@ -66,7 +62,7 @@ main {
     grid-gap: 2rem 3rem;
   }
 }
-// category item/products container 
+// catalogue item container 
 .catalogue-item {
   display: block;
   position: relative;
@@ -82,7 +78,7 @@ main {
     visibility: hidden;
     color: $light;
     background: transparent;
-    height: 98%;
+    height: 96%;
     width: 100%;
     text-align: center;
   }
@@ -95,12 +91,11 @@ main {
   } 
 }
 
-// catalogue products page 
+// category page
 .product-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin-bottom: 1rem;
   h3 {
     justify-self: left;
     margin: 1.5rem 0;
@@ -112,6 +107,9 @@ main {
     @include buttonHover;
     }
   }
+}
+.catalogue {
+  margin-top: 1rem;
 }
 
 // about page - gallery 
@@ -178,7 +176,7 @@ main {
     grid-template-areas:
       "form form address"
       "form form map";
-    grid-gap: 5rem;
+    grid-gap: 6rem;
   }
 }
 .address {
@@ -267,7 +265,7 @@ main {
   @include mQLrg {
     grid-area: map;
     height: 20rem;
-    margin-top: -4rem;
+    margin-top: -5.5rem;
   }
 }
 
