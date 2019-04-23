@@ -121,6 +121,7 @@ main {
 }
 .slider-container {
   @include fullWidthContainer;
+  position: relative;
   margin-top: -1rem;
   margin-bottom: 1.3rem;
   .slider-items {
@@ -144,14 +145,25 @@ main {
     color: $light;
     &.arrow-left {
       left: .3rem;
+      @include mQLrg {
+        left: 20%;
+      }
     }
     &.arrow-right {
       right: .3rem;
+      @include mQLrg {
+        right: 20%;
+      }
     }
     &:hover {
       color: $dark;
       @include hoverEffect;
     }
+  }
+  // slider-container media query
+  @include mQLrg {
+    width: 180%;
+    left: -40%;
   }
 }
 .about {
@@ -159,10 +171,24 @@ main {
 }
 
 // contact
+.contact-container {
+  @include mQLrg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "form form address"
+      "form form map";
+    grid-gap: 5rem;
+  }
+}
 .address {
   text-align: center;
   line-height: 2.5rem;
   margin-top: 2rem;
+  @include mQLrg {
+    grid-area: address;
+    line-height: 4rem;
+  }
   h3 {
     margin: 0;
   }
@@ -179,7 +205,7 @@ main {
   grid-template-columns: 1fr;
   grid-gap: .3rem;
   text-align: center;
-  margin: 3rem auto 0;
+  margin-top: 3rem;
   .error-msg {
     @include button;
     @include hoverEffect;
@@ -194,6 +220,9 @@ main {
     font-size: 1rem;
     border: none;
     border-bottom: .03rem solid $dark;
+    @include mQLrg {
+      margin-bottom: 1.5rem;
+    }
   }
   textarea {
     height: 4rem;
@@ -227,10 +256,19 @@ main {
   input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
   }
+  @include mQLrg {
+    grid-area: form;
+  }
 }
 .map iframe {
   @include fullWidthContainer;
+  position: relative;
   height: 12rem;
+  @include mQLrg {
+    grid-area: map;
+    height: 20rem;
+    margin-top: -4rem;
+  }
 }
 
 // thank you page

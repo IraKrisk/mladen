@@ -34,7 +34,9 @@
   font-weight: bold;
   background: #601b1b;
   padding: 1.5rem;
-  transition: all .6s ease-out; }
+  transition: all .6s ease-out;
+  width: 111%;
+  left: -5.5%; }
   .menu-list.open {
     display: block;
     margin-top: 0; }
@@ -91,6 +93,7 @@
     .menu-list {
       margin-top: 0;
       width: 60%;
+      left: auto;
       right: 0;
       padding: .7rem 0;
       letter-spacing: 0;
@@ -235,9 +238,9 @@ main {
     opacity: 1; } }
 
 .slider-container {
+  width: 111%;
+  left: -5.5%;
   position: relative;
-  width: 180%;
-  left: -40%;
   margin-top: -1rem;
   margin-bottom: 1.3rem; }
   .slider-container .slider-items {
@@ -257,19 +260,40 @@ main {
     color: #eee8d5; }
     .slider-container .arrow.arrow-left {
       left: .3rem; }
+      @media (min-width: 48rem) {
+        .slider-container .arrow.arrow-left {
+          left: 20%; } }
     .slider-container .arrow.arrow-right {
       right: .3rem; }
+      @media (min-width: 48rem) {
+        .slider-container .arrow.arrow-right {
+          right: 20%; } }
     .slider-container .arrow:hover {
       color: #601b1b;
       transition: all .6s ease-out; }
+  @media (min-width: 48rem) {
+    .slider-container {
+      width: 180%;
+      left: -40%; } }
 
 .about {
   margin-bottom: 1.7rem; }
+
+@media (min-width: 48rem) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "form form address" "form form map";
+    grid-gap: 5rem; } }
 
 .address {
   text-align: center;
   line-height: 2.5rem;
   margin-top: 2rem; }
+  @media (min-width: 48rem) {
+    .address {
+      grid-area: address;
+      line-height: 4rem; } }
   .address h3 {
     margin: 0; }
   .address .fa-address-card, .address .fa-envelope, .address .fa-phone {
@@ -283,7 +307,7 @@ main {
   grid-template-columns: 1fr;
   grid-gap: .3rem;
   text-align: center;
-  margin: 3rem auto 0; }
+  margin-top: 3rem; }
   .form .error-msg {
     color: #eee8d5;
     background: #601b1b;
@@ -301,6 +325,9 @@ main {
     font-size: 1rem;
     border: none;
     border-bottom: 0.03rem solid #601b1b; }
+    @media (min-width: 48rem) {
+      .form input, .form textarea {
+        margin-bottom: 1.5rem; } }
   .form textarea {
     height: 4rem; }
   .form #submit {
@@ -330,12 +357,20 @@ main {
   .form input[type=number]::-webkit-inner-spin-button,
   .form input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none; }
+  @media (min-width: 48rem) {
+    .form {
+      grid-area: form; } }
 
 .map iframe {
+  width: 111%;
+  left: -5.5%;
   position: relative;
-  width: 180%;
-  left: -40%;
   height: 12rem; }
+  @media (min-width: 48rem) {
+    .map iframe {
+      grid-area: map;
+      height: 20rem;
+      margin-top: -4rem; } }
 
 .thank-you {
   text-align: center;

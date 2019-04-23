@@ -23,11 +23,10 @@ $shadow: 0px 0px 10px -8px;
   background: $darkLighten;
   @include hoverEffect;
 }
-// full width slider and map
+// full width slider, map, and menu
 @mixin fullWidthContainer {
-  position: relative;
-  width: 180%;
-  left: -40%;
+  width: 111%;
+  left: -5.5%;
 }
 @mixin animatedUnderline {
   position: absolute;
